@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="System Import Sets" source="com.glide.system_import_set">950bedf2f13322108bb2efdbde054c74</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-22 17:16:01</sys_created_on>
+        <sys_id>400346f83bf03210f0d15f0f23e45a4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Vehicles" source="x_1834695_vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_package>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-22 17:16:01</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>
