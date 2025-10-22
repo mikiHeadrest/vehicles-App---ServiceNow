@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl/>
+        <http_method>GET</http_method>
+        <name>GetVehicle</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    
+    // implement resource here
+	var answer = [];
+	// Gets vin from the path parameter
+	var vin = request.pathParams.vin;
+
+	//var vin = request.queryParams;
+	// Another way to get params
+
+	if(!vin){
+		//no VIN found
+		response.setError(new sn_ws_err.NotFoundError('Error, no VIN parameter inside URL'));
+		// sn_ws_err < Class used to show errors
+		response.setStatus(404);
+		return;
+	}
+
+	// Query Vehicle table for this VIN
+	var vehicleTable = 'x_1834695_vehicles_vehicles';
+	// unique id for Vehicle Table
+	var vehicleGr = new GlideRecord(vehicleTable);
+	vehicleGr.addQuery('vin',vin);
+	vehicleGr.query();
+
+	if(!vehicleGr.hasNext()){
+		response.setError(new sn_ws_err.NotFoundError('Error, Vehicle with Vin:'+VIN +' was not found.'));
+		response.setStatus(404);
+		return;
+	}
+
+	// Generating a JSON for each vehicle found
+	while(vehicleGr.next()){
+		var vehicleObj = {
+			// here you define what you want to return in the API
+			"make": vehicleGr.getValue('make'),
+			"model": vehicleGr.getValue('model'),
+			"city": vehicleGr.getValue('city'),
+			"country": vehicleGr.getValue('country'),
+			"vin" : vehicleGr.getValue('vin'),
+			"year" : parseInt(vehicleGr.getValue('year'),10)
+			// parsing the year from String -> Int
+		};
+		answer.push(vehicleObj);
+	}
+	// Generate the response Body
+	response.setBody(answer);
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_1834695_vehicles/vehicles/Vehicle/{vin}</operation_uri>
+        <produces>application/json</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/Vehicle/{vin}</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-22 19:56:19</sys_created_on>
+        <sys_id>e7872ef43bb43210f0d15f0f23e45aa8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GetVehicle</sys_name>
+        <sys_package display_value="Vehicles" source="x_1834695_vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_scope>
+        <sys_update_name>sys_ws_operation_e7872ef43bb43210f0d15f0f23e45aa8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-22 19:56:19</sys_updated_on>
+        <web_service_definition display_value="Vehicles">160d1e3c3b743210f0d15f0f23e45a4d</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>
