@@ -57,10 +57,10 @@
 	response.setBody(answer);
 
 })(request, response);]]></operation_script>
-        <operation_uri>/api/x_1834695_vehicles/vehicles/Vehicle/{vin}</operation_uri>
+        <operation_uri>/api/x_1834695_vehicles/vehicles/vehicle/{vin}</operation_uri>
         <produces>application/json</produces>
         <produces_customized>false</produces_customized>
-        <relative_path>/Vehicle/{vin}</relative_path>
+        <relative_path>/vehicle/{vin}</relative_path>
         <request_example/>
         <requires_acl_authorization>true</requires_acl_authorization>
         <requires_authentication>true</requires_authentication>
@@ -70,14 +70,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-22 19:56:19</sys_created_on>
         <sys_id>e7872ef43bb43210f0d15f0f23e45aa8</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>GetVehicle</sys_name>
         <sys_package display_value="Vehicles" source="x_1834695_vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_package>
         <sys_policy/>
         <sys_scope display_value="Vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_scope>
         <sys_update_name>sys_ws_operation_e7872ef43bb43210f0d15f0f23e45aa8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-22 19:56:19</sys_updated_on>
+        <sys_updated_on>2025-10-23 15:27:20</sys_updated_on>
         <web_service_definition display_value="Vehicles">160d1e3c3b743210f0d15f0f23e45a4d</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

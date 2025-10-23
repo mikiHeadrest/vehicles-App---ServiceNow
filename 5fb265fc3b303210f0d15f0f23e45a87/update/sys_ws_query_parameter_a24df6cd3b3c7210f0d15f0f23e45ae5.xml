@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_query_parameter">
+    <sys_ws_query_parameter action="INSERT_OR_UPDATE">
+        <example_value/>
+        <name>city</name>
+        <required>false</required>
+        <short_description>City in which a Vehicle is located</short_description>
+        <sys_class_name>sys_ws_query_parameter</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-23 16:09:41</sys_created_on>
+        <sys_id>a24df6cd3b3c7210f0d15f0f23e45ae5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>city</sys_name>
+        <sys_package display_value="Vehicles" source="x_1834695_vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_scope>
+        <sys_update_name>sys_ws_query_parameter_a24df6cd3b3c7210f0d15f0f23e45ae5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-23 16:09:41</sys_updated_on>
+        <web_service_definition display_value="Vehicles">160d1e3c3b743210f0d15f0f23e45a4d</web_service_definition>
+    </sys_ws_query_parameter>
+</record_update>
