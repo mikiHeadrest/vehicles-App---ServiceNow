@@ -3,10 +3,10 @@
         <active>true</active>
         <consumes>application/json</consumes>
         <consumes_customized>false</consumes_customized>
-        <default_operation_uri>/api/x_1834695_vehicles/vehicles/vehicle/{vin}</default_operation_uri>
+        <default_operation_uri/>
         <enforce_acl/>
         <http_method>PATCH</http_method>
-        <name>Update Vehicles</name>
+        <name>Update Vehicles (v2)</name>
         <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
 
     // Variable that stores answer
@@ -119,7 +119,7 @@
 		serviceError2.setDetail("There was an error while trying to update the Vehicles table, please speak to a System Administrator");
 	}
 })(request, response);]]></operation_script>
-        <operation_uri>/api/x_1834695_vehicles/v1/vehicles/vehicle/{vin}</operation_uri>
+        <operation_uri>/api/x_1834695_vehicles/v2/vehicles/vehicle/{vin}</operation_uri>
         <produces>application/json</produces>
         <produces_customized>false</produces_customized>
         <relative_path>/vehicle/{vin}</relative_path>
@@ -130,17 +130,17 @@
         <short_description/>
         <sys_class_name>sys_ws_operation</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-24 15:32:25</sys_created_on>
-        <sys_id>2b9a73d53bb4f210f0d15f0f23e45adb</sys_id>
-        <sys_mod_count>31</sys_mod_count>
-        <sys_name>Update Vehicles</sys_name>
+        <sys_created_on>2025-10-24 18:53:07</sys_created_on>
+        <sys_id>356ca0a93bb8f210f0d15f0f23e45a13</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Update Vehicles (v2)</sys_name>
         <sys_package display_value="Vehicles" source="x_1834695_vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_package>
         <sys_policy/>
         <sys_scope display_value="Vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_scope>
-        <sys_update_name>sys_ws_operation_2b9a73d53bb4f210f0d15f0f23e45adb</sys_update_name>
+        <sys_update_name>sys_ws_operation_356ca0a93bb8f210f0d15f0f23e45a13</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-24 18:49:01</sys_updated_on>
+        <sys_updated_on>2025-10-24 18:53:07</sys_updated_on>
         <web_service_definition display_value="Vehicles">160d1e3c3b743210f0d15f0f23e45a4d</web_service_definition>
-        <web_service_version display_value="v1">717be4e13b78f210f0d15f0f23e45a1f</web_service_version>
+        <web_service_version display_value="v2">716cec293bb8f210f0d15f0f23e45a1e</web_service_version>
     </sys_ws_operation>
 </record_update>

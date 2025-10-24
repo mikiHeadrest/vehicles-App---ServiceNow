@@ -3,10 +3,10 @@
         <active>true</active>
         <consumes>application/json</consumes>
         <consumes_customized>false</consumes_customized>
-        <default_operation_uri>/api/x_1834695_vehicles/vehicles/vehicles</default_operation_uri>
+        <default_operation_uri/>
         <enforce_acl/>
         <http_method>POST</http_method>
-        <name>Create Vehicles</name>
+        <name>Create Vehicles (v2)</name>
         <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
     // implement resource here
 	// Declare an empty array for answer
@@ -110,7 +110,7 @@
 	//for testing
 	// response.setBody({"message":"Nice"});
 })(request, response);]]></operation_script>
-        <operation_uri>/api/x_1834695_vehicles/v1/vehicles/vehicles</operation_uri>
+        <operation_uri>/api/x_1834695_vehicles/v2/vehicles/vehicles</operation_uri>
         <produces>application/json</produces>
         <produces_customized>false</produces_customized>
         <relative_path>/vehicles</relative_path>
@@ -121,17 +121,17 @@
         <short_description/>
         <sys_class_name>sys_ws_operation</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-23 18:11:24</sys_created_on>
-        <sys_id>f742c7c13b7c7210f0d15f0f23e45ae2</sys_id>
-        <sys_mod_count>86</sys_mod_count>
-        <sys_name>Create Vehicles</sys_name>
+        <sys_created_on>2025-10-24 18:53:07</sys_created_on>
+        <sys_id>396ca0a93bb8f210f0d15f0f23e45a27</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create Vehicles (v2)</sys_name>
         <sys_package display_value="Vehicles" source="x_1834695_vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_package>
         <sys_policy/>
         <sys_scope display_value="Vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_scope>
-        <sys_update_name>sys_ws_operation_f742c7c13b7c7210f0d15f0f23e45ae2</sys_update_name>
+        <sys_update_name>sys_ws_operation_396ca0a93bb8f210f0d15f0f23e45a27</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-24 18:49:01</sys_updated_on>
+        <sys_updated_on>2025-10-24 18:53:07</sys_updated_on>
         <web_service_definition display_value="Vehicles">160d1e3c3b743210f0d15f0f23e45a4d</web_service_definition>
-        <web_service_version display_value="v1">717be4e13b78f210f0d15f0f23e45a1f</web_service_version>
+        <web_service_version display_value="v2">716cec293bb8f210f0d15f0f23e45a1e</web_service_version>
     </sys_ws_operation>
 </record_update>
