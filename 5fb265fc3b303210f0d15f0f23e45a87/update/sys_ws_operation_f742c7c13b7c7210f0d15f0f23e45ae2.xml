@@ -8,7 +8,6 @@
         <http_method>POST</http_method>
         <name>Create Vehicles</name>
         <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
-	gs.info("The script is properly executing");
     // implement resource here
 	// Declare an empty array for answer
 	var answer = [];
@@ -18,67 +17,82 @@
 	var requestBody = request.body;
 	var requestString = requestBody.dataString;
 	var result = JSON.parse(requestString);
-	var dumbVariable = "postResult";
+	// this works
 
+	// var result = JSON.parse(requestString);
 	try{
+		//Debug Logs Delete
 		gs.info("Inside the try thing | Result: " + requestString);
-		dumbVariable = "tryAgain";
-		gs.info("Stringified: "+ JSON.stringify(result));
 		// the current type of result is an object needs to be an array
 
 		// MAKE AN ERROR IF THE RESULT DOESNT CONTAIN the property vehicles	
+		gs.info("Hello");
+		if(result.hasOwnProperty('vehicles')){
+			gs.info("GOOD JOB LAD");
+		}
+		gs.info("BYE");
+
+		// this is not the error I guess
 		for(i in result.vehicles){
-			gs.info("I'm scrolling through");
 			// Declare variables for the possible names in a 		request body
+			
 			var make = result.vehicles[i].make;
 			var model = result.vehicles[i].model;
 			var vin = result.vehicles[i].vin;
 			var year = result.vehicles[i].year;
 			var country = result.vehicles[i].country;
-			var city = results.vehicles[i].city;
+			var city = result.vehicles[i].city;
 
 			gs.info('Inside the for array ['+i+"]");
 			var table = 'x_1834695_vehicles_vehicles';
 			var vehicleGr = new GlideRecord(table);
 				
-	// 			// Creates a default new Record of the chosen Table
-	// 			vehicleGr.initialize();
-	// 			vehicleGr.make = make;
-	// 			vehicleGr.model = model;
-	// 			vehicleGr.vin = vin;
-	// 			vehicleGr.year = year;
-	// 			vehicleGr.country = country;
-	// 			vehicleGr.city = city;
+			// Creates a default new Record of the chosen Table
+			vehicleGr.initialize();
+			vehicleGr.make = make;
+			vehicleGr.model = model;
+			vehicleGr.vin = vin;
+			vehicleGr.year = year;
+			vehicleGr.country = country;
+			vehicleGr.city = city;
 
-	// 			// The new records get added
-	// 			vehicleGr.insert();
+			gs.info("Added:" + vehicleGr);
+			gs.info(JSON.stringify(vehicleGr));
 
-	// 			var vehicleObj = {
-	// 				"vin" : vin,
-	// 				"sys_id" :  vehicleGr.sys_id
-	// 			};
+			//The new records get added
+			vehicleGr.insert();
 
-	// 			// After inserting a New Vehicle 
-	// 			// in the response the id of the insert is uploaded
-	// 			answer.push(vehicleObj);
+			var vehicleObj = {
+				"vin" : vin,
+				"sys_id" :  vehicleGr.sys_id
+			};
+
+			gs.info(JSON.stringify(vehicleObj));
+
+			// After inserting a New Vehicle 
+			// in the response the id of the insert is uploaded
+			answer.push(vehicleObj);
 		}
-	// 		response.status(201);
+
+		response.status(201);
  	}
  	catch(error){
-	// 		//sn_ws_err() is the error Handler in Service Now!
-
-		// var serviceError = new sn_ws_err.serviceError();
-		// serviceError.setStatus(500);
-		gs.info("I'm so dumb, i got an error! | Dumb Variable:"+dumbVariable);
-	// 		serviceError.setMessage('Service Error');
-	// 		serviceError.setDescription('The server had an error while processing this information | ');
-	// 		response.setError(serviceError);
+		//sn_ws_err() is the error Handler in Service Now!
+		var serviceError = new sn_ws_err.ServiceError();
+		serviceError.setStatus(500);
+		// debugging message pls DELETE
+		gs.info("I'm so dumb, i got an error!");
+		serviceError.setMessage('Service Error');
+		serviceError.setDetail('The server had an error while processing this information | ');
+		response.setError(serviceError);
  	}
 
-		// As a result of inserting new data the User
-		// receives the vin and the sys_id of the newly generated data!
-	//response.setBody(answer);
-	response.setBody({"message":"Nice"});
+	// As a result of inserting new data the User
+	// receives the vin and the sys_id of the newly generated data!
+	response.setBody(answer);
+
+	//for testing
+	// response.setBody({"message":"Nice"});
 })(request, response);]]></operation_script>
         <operation_uri>/api/x_1834695_vehicles/vehicles/vehicles</operation_uri>
         <produces>application/json</produces>
@@ -93,14 +107,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-23 18:11:24</sys_created_on>
         <sys_id>f742c7c13b7c7210f0d15f0f23e45ae2</sys_id>
-        <sys_mod_count>41</sys_mod_count>
+        <sys_mod_count>63</sys_mod_count>
         <sys_name>Create Vehicles</sys_name>
         <sys_package display_value="Vehicles" source="x_1834695_vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_package>
         <sys_policy/>
         <sys_scope display_value="Vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_scope>
         <sys_update_name>sys_ws_operation_f742c7c13b7c7210f0d15f0f23e45ae2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-23 20:13:50</sys_updated_on>
+        <sys_updated_on>2025-10-23 22:45:19</sys_updated_on>
         <web_service_definition display_value="Vehicles">160d1e3c3b743210f0d15f0f23e45a4d</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>
