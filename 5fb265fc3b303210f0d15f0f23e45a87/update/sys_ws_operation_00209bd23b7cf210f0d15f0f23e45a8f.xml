@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl/>
+        <http_method>POST</http_method>
+        <name>Create Vehicles (v3)</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+    // implement resource here
+	// Declare an empty array for answer
+	var answer = [];
+	
+
+	// Convert the Request of a Body > JSON object > JavaScript string > array
+	var requestBody = request.body;
+	var requestString = requestBody.dataString;
+	var result = JSON.parse(requestString);
+
+	try{
+		// the current type of result is an object needs to be an array
+
+		// MAKE AN ERROR IF THE RESULT DOESNT CONTAIN the property vehicles	
+		if(result.hasOwnProperty('vehicles')){
+			//gs.info("Vehicles array detected, new inserts soon..."); //this was for debuging
+		}
+		else{
+			var badRequest = new sn_ws_err.ServiceError('JSON body has wrong syntax');
+			badRequest.setStatus(400);
+			badRequest.setMessage('Wrong JSON body syntax');
+			badRequest.setDetail('The name of the array that contains information about the Vehicles must be { "vehicles"[ : { "content":"content" ... }] }');
+			response.setError(badRequest);
+			return;
+		}
+		// Works for detecting if the name of the array that contains the 
+		// Vehicles data is `Vehicles` as well
+		// if("vehicles" in result){
+		// 	gs.info("I'm scared of the place");
+		// }
+
+
+		for(i in result.vehicles){
+			// Declare variables for the possible names in a request body
+			var make = result.vehicles[i].make;
+			var model = result.vehicles[i].model;
+			var vin = result.vehicles[i].vin;
+			var year = result.vehicles[i].year;
+			var country = result.vehicles[i].country;
+			var city = result.vehicles[i].city;
+
+			// error that verifies that all the mandatory fields are filled
+			if(make == null || model == null || vin == null || year == null || country == null || city == null){
+				if(i != 0 ){
+					// se han realizado inserciones previas
+				}
+				else{
+					// no inserciones correctas
+				}
+			}
+
+			var table = 'x_1834695_vehicles_vehicles';
+			var vehicleGr = new GlideRecord(table);
+				
+			// Creates a default new Record of the chosen Table
+			vehicleGr.initialize();
+			vehicleGr.make = make;
+			vehicleGr.model = model;
+			vehicleGr.vin = vin;
+			vehicleGr.year = year;
+			vehicleGr.country = country;
+			vehicleGr.city = city;
+
+			// It's not showing the data :c
+			//gs.info("Added:" + JSON.stringify(vehicleGr));
+
+			//The new records get added
+			vehicleGr.insert();
+
+			var vehicleObj = {
+				"vin" : vin,
+				"sys_id" :  vehicleGr.sys_id
+			};
+
+			// Works great - debug comment
+			gs.info("[" +(parseInt(i)+1)+ "] | New element has been Added to the Vehicles Table!: " + JSON.stringify(vehicleObj));
+
+			// After inserting a New Vehicle 
+			// in the response the id of the insert is uploaded
+			answer.push(vehicleObj);
+		}
+	}
+	catch(error){
+		//sn_ws_err() is the error Handler in Service Now!
+		gs.info(error.dataString);
+		var serviceError = new sn_ws_err.ServiceError();
+		serviceError.setStatus(500);
+		serviceError.setMessage('Server Error');
+		serviceError.setDetail('There was an error while trying to insert your values..' + error.dataString);
+		response.setError(serviceError);
+		// debugging message pls DELETE
+		return;
+	}
+
+	// As a result of inserting new data the User
+	// receives the vin and the sys_id of the newly generated data!
+	response.setStatus(201);
+	response.setBody(answer);
+
+	//for testing
+	// response.setBody({"message":"Nice"});
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_1834695_vehicles/v3/vehicles/vehicles</operation_uri>
+        <produces>application/json</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/vehicles</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-27 14:43:52</sys_created_on>
+        <sys_id>00209bd23b7cf210f0d15f0f23e45a8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create Vehicles (v3)</sys_name>
+        <sys_package display_value="Vehicles" source="x_1834695_vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_scope>
+        <sys_update_name>sys_ws_operation_00209bd23b7cf210f0d15f0f23e45a8f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-27 14:43:52</sys_updated_on>
+        <web_service_definition display_value="Vehicles">160d1e3c3b743210f0d15f0f23e45a4d</web_service_definition>
+        <web_service_version display_value="v3">cc205bd23b7cf210f0d15f0f23e45aff</web_service_version>
+    </sys_ws_operation>
+</record_update>

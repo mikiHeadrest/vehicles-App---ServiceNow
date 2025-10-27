@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl/>
+        <http_method>DELETE</http_method>
+        <name>Delete Vehicles (v3)</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    // implement resource here
+	// get the vin to delete
+	var vin = request.pathParams.vin;
+
+	var answer = [];
+
+	if(!vin){
+		var serviceError = new sn_nw_err.ServiceError();
+		serviceError.setStatus(400);
+		serviceError.setMessage("Error: VIN paramater as undefined");
+		serviceError.setDetail("The request doesn't contain a VIN");
+		response.setError(serviceError);
+	}
+
+	var table = 'x_1834695_vehicles_vehicles';
+	var vehicleDataGr = new GlideRecord(table);
+	vehicleDataGr.addQuery('vin',vin);
+	vehicleDataGr.query();
+
+	//add a property that instead of deleting just sets them as unactive
+	// in the mean time, delete demo records :>
+	if(!vehicleDataGr.hasNext()){
+		gs.info('Delete | No record found case');
+		var serviceErrorv2 = new sn_ws_err.ServiceError();
+		serviceErrorv2.setStatus(404);
+		serviceErrorv2.setMessage("Error: Vin was not found");
+		serviceErrorv2.setDetail("The Vin ["+vin+"] was not found inside the Vehicles Tables...");
+		response.setError(serviceErrorv2);
+		
+	}else if (vehicleDataGr.next()){
+		gs.info("The data with id: "+ vehicleDataGr.vin + ", will be deleted, " + " | Say bye to :" + vehicleDataGr.model);
+		response.setStatus(200);
+		// delete the thing here
+		// vin, make, model, year,country , city
+		var deletedVehicle = {
+			"vin":vehicleDataGr.vin,
+			"make":vehicleDataGr.make,
+			"model":vehicleDataGr.model,
+			"year":vehicleDataGr.year,
+			"country":vehicleDataGr.country,
+			"city":vehicleDataGr.city,
+		};
+
+		//deletes the record, goodby
+		vehicleDataGr.deleteRecord();
+		answer.push({"message":"This Vehicle was deleted..."})
+		answer.push(deletedVehicle);
+	}
+
+	response.setBody(answer);
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_1834695_vehicles/v3/vehicles/vehicle/{vin}</operation_uri>
+        <produces>application/json</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/vehicle/{vin}</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-27 14:43:54</sys_created_on>
+        <sys_id>ec209bd23b7cf210f0d15f0f23e45ab9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Delete Vehicles (v3)</sys_name>
+        <sys_package display_value="Vehicles" source="x_1834695_vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_scope>
+        <sys_update_name>sys_ws_operation_ec209bd23b7cf210f0d15f0f23e45ab9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-27 14:43:54</sys_updated_on>
+        <web_service_definition display_value="Vehicles">160d1e3c3b743210f0d15f0f23e45a4d</web_service_definition>
+        <web_service_version display_value="v3">cc205bd23b7cf210f0d15f0f23e45aff</web_service_version>
+    </sys_ws_operation>
+</record_update>

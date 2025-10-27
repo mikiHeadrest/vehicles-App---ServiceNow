@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl/>
+        <http_method>PATCH</http_method>
+        <name>Update Vehicles (v3)</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    // Variable that stores answer
+	var answer = [];
+
+	// fetches the VIN
+	var vin = request.pathParams.vin;
+
+	//searches for the VIN
+	try{
+		var table = 'x_1834695_vehicles_vehicles';
+		var vehicleGr = new GlideRecord(table);
+		// earch for the vin
+		vehicleGr.addQuery('vin',vin);
+		vehicleGr.query();
+
+		//Fetches the inputed data on the body
+		var requestBody = request.body.data;
+		// make, model, year, country,city
+		var make = requestBody.make;
+		var model = requestBody.model;
+		var year = requestBody.year;
+		var country = requestBody.city;
+		var city = requestBody.country;
+		
+		
+		//working - Query not working :c
+		// has next only works after the execution of a query
+		//gs.info("Vehicle.next:" + JSON.string(vehicleGr.next()));
+
+		if(!vehicleGr.hasNext()){
+			// If Vin was not found
+			var serviceError = new sn_ws_err.ServiceError();
+			serviceError.setStatus(404);
+			serviceError.setMessage("Error: Vin Not Found");
+			serviceError.setDetail("The vin ["+vin+"] was not Found inside the Vehicles table");
+
+			response.setError(serviceError);
+		}
+		else if(vehicleGr.next()){
+			// gs.info("Vehicle.next:" + JSON.stringify(vehicleGr.next()));
+			//Variable that keeps track of the amount of updated data
+			var dataUpdated = "Data updated: ";
+
+			// is there a better way?
+			// make, model, year, country,city
+			if(make){
+				//gs.info('In make, things working | Old make:'+vehicleGr.make + " | New make: " + make);
+				vehicleGr.make = make; 
+				dataUpdated += " [Make Updated] ";
+			}
+			if(model){
+				vehicleGr.model = model; 
+				dataUpdated += " [Model Updated] ";
+			}
+			if(year){
+				vehicleGr.year = year; 
+				dataUpdated += " [Year Updated] ";
+			}
+			if(city){
+				vehicleGr.city = city; 
+				dataUpdated += " [City Updated] ";
+			}
+			if(country){
+				vehicleGr.country = country; 
+				dataUpdated += " [Country Updated] ";
+			}
+
+			// Verifies if there was at least an element updated
+			if(dataUpdated == "Data updated: "){
+				// working properly
+				dataUpdated += " [No Data Updated]  PS: Don't do that again...";
+				response.setStatus(200);
+				// if status is set to 204 then, no response Body, even if one
+				// is set
+				answer.push({"message":dataUpdated});
+			}
+			else{
+				// Applies the changes to the solicited Vehicle
+				vehicleGr.update();
+				response.setStatus(200);
+				answer.push({"message":dataUpdated});
+				
+				// Creates an object that returns the updated vehicle!
+				var updatedObj = {
+					"vin":vehicleGr.vin,
+					"make":vehicleGr.make,
+					"model":vehicleGr.model,
+					"year":vehicleGr.year,
+					"country":vehicleGr.country,
+					"city":vehicleGr.city,
+					"sys_id":vehicleGr.sys_id
+				};
+				answer.push({"updated_vehicle":updatedObj});
+			}
+
+			// the response contains an array of different objects :>
+			// update in the future so that no message shows :3
+			response.setBody(answer);
+			// contains message object
+			// containes de updated_vehicle object, only if update was made of course
+		}
+
+	}
+	catch(error){
+		//error
+		var serviceError2 = new sn_ws_err.ServiceError();
+		serviceError2.setStatus(500);
+		serviceError2.setMessage("Error: There was a server error");
+		serviceError2.setDetail("There was an error while trying to update the Vehicles table, please speak to a System Administrator");
+	}
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_1834695_vehicles/v3/vehicles/vehicle/{vin}</operation_uri>
+        <produces>application/json</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/vehicle/{vin}</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-27 14:43:52</sys_created_on>
+        <sys_id>c4209bd23b7cf210f0d15f0f23e45a03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Update Vehicles (v3)</sys_name>
+        <sys_package display_value="Vehicles" source="x_1834695_vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_scope>
+        <sys_update_name>sys_ws_operation_c4209bd23b7cf210f0d15f0f23e45a03</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-27 14:43:52</sys_updated_on>
+        <web_service_definition display_value="Vehicles">160d1e3c3b743210f0d15f0f23e45a4d</web_service_definition>
+        <web_service_version display_value="v3">cc205bd23b7cf210f0d15f0f23e45aff</web_service_version>
+    </sys_ws_operation>
+</record_update>
