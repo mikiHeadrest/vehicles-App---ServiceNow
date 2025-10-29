@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="oauth_entity">
+    <oauth_entity action="DELETE">
+        <access>public</access>
+        <access_token_lifespan>1800</access_token_lifespan>
+        <active>true</active>
+        <auth_code_lifespan>60</auth_code_lifespan>
+        <auth_url/>
+        <certificate_url/>
+        <client_id>1d1ec98a1ee0445499d128004d41b675</client_id>
+        <client_secret>﷞﷟﷒b2dee4563becf210f0d15f0f23e45a69﷬﷔1﷬﷭oijIotYSDwfx0GTzsRwBOA==5mjJSUA6HEmXfzzljva63CV0Et9GzRP9QMr1kMc4-2fQdTxWOZPvi0SMHhTK1Q_L﷮﷯</client_secret>
+        <client_type/>
+        <client_uuid>251c91b23bfc7210f0d15f0f23e45a8c</client_uuid>
+        <code_challenge_method>S256</code_challenge_method>
+        <comments>REST API Endpoint for this same instance!</comments>
+        <default_grant_type>password</default_grant_type>
+        <extend_refresh_token_expiry>false</extend_refresh_token_expiry>
+        <id_token_lifespan>86400</id_token_lifespan>
+        <inbound_grant_type>authz_code</inbound_grant_type>
+        <jwt_provider/>
+        <login_url/>
+        <logo_url/>
+        <message_signature_lifespan>60</message_signature_lifespan>
+        <mobile_client>false</mobile_client>
+        <name>Vehicles Scripted REST API</name>
+        <oauth_api_script/>
+        <protocol_name/>
+        <public_client>false</public_client>
+        <redirect_url>https://dev355227.service-now.com/oauth_redirect.do</redirect_url>
+        <refresh_token_lifespan>8640000</refresh_token_lifespan>
+        <refresh_token_url/>
+        <restricted_binding>false</restricted_binding>
+        <revoke_token_url/>
+        <salt/>
+        <send_client_credentials_as>request_body_parameter</send_client_credentials_as>
+        <skip_authorize>false</skip_authorize>
+        <sub_claim>user_name</sub_claim>
+        <sys_class_name>oauth_entity</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-28 19:33:52</sys_created_on>
+        <sys_id>651c91b23bfc7210f0d15f0f23e45a8c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Vehicles Scripted REST API</sys_name>
+        <sys_package display_value="Vehicles" source="x_1834695_vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_scope>
+        <sys_update_name>oauth_entity_651c91b23bfc7210f0d15f0f23e45a8c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-28 19:33:52</sys_updated_on>
+        <token_format>opaque</token_format>
+        <token_url/>
+        <type>client</type>
+        <use_mutual_auth>false</use_mutual_auth>
+        <use_pkce>false</use_pkce>
+        <user/>
+    </oauth_entity>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Vehicles">5fb265fc3b303210f0d15f0f23e45a87</application>
+        <file_path/>
+        <instance_id>54f46e2033db66947c42c7bb9d5c7b24</instance_id>
+        <instance_name>dev355227</instance_name>
+        <name>oauth_entity_651c91b23bfc7210f0d15f0f23e45a8c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="oauth_entity"><oauth_entity action="INSERT_OR_UPDATE"><access>public</access><access_token_lifespan>1800</access_token_lifespan><active>true</active><auth_code_lifespan>60</auth_code_lifespan><auth_url/><certificate_url/><client_id>1d1ec98a1ee0445499d128004d41b675</client_id><client_secret>﷞﷟﷒b2dee4563becf210f0d15f0f23e45a69﷬﷔1﷬﷭oijIotYSDwfx0GTzsRwBOA==5mjJSUA6HEmXfzzljva63CV0Et9GzRP9QMr1kMc4-2fQdTxWOZPvi0SMHhTK1Q_L﷮﷯</client_secret><client_type/><client_uuid>251c91b23bfc7210f0d15f0f23e45a8c</client_uuid><code_challenge_method>S256</code_challenge_method><comments>REST API Endpoint for this same instance!</comments><default_grant_type>password</default_grant_type><extend_refresh_token_expiry>false</extend_refresh_token_expiry><id_token_lifespan>86400</id_token_lifespan><inbound_grant_type>authz_code</inbound_grant_type><jwt_provider/><login_url/><logo_url/><message_signature_lifespan>60</message_signature_lifespan><mobile_client>false</mobile_client><name>Vehicles Scripted REST API</name><oauth_api_script/><protocol_name/><public_client>false</public_client><redirect_url>https://dev355227.service-now.com/oauth_redirect.do</redirect_url><refresh_token_lifespan>8640000</refresh_token_lifespan><refresh_token_url/><restricted_binding>false</restricted_binding><revoke_token_url/><salt/><send_client_credentials_as>request_body_parameter</send_client_credentials_as><skip_authorize>false</skip_authorize><sub_claim>user_name</sub_claim><sys_class_name>oauth_entity</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-28 19:33:52</sys_created_on><sys_id>651c91b23bfc7210f0d15f0f23e45a8c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Vehicles Scripted REST API</sys_name><sys_package display_value="Vehicles" source="x_1834695_vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_package><sys_policy/><sys_scope display_value="Vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_scope><sys_update_name>oauth_entity_651c91b23bfc7210f0d15f0f23e45a8c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-28 19:33:52</sys_updated_on><token_format>opaque</token_format><token_url/><type>client</type><use_mutual_auth>false</use_mutual_auth><use_pkce>false</use_pkce><user/></oauth_entity></record_update>]]></payload>
+        <payload_hash>901348978</payload_hash>
+        <record_name>Vehicles Scripted REST API</record_name>
+        <reverted_from/>
+        <source>fde122343bb43210f0d15f0f23e45a60</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-28 19:33:52</sys_created_on>
+        <sys_id>b91c91b23bfc7210f0d15f0f23e45a90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19a2c5002c00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-28 19:33:52</sys_updated_on>
+        <type>Application Registries</type>
+        <update_guid>311c91b201fc72107d2944306d1c9090</update_guid>
+        <update_guid_history>311c91b201fc72107d2944306d1c9090:901348978</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Vehicles Scripted REST API">4bfe55b23bfc7210f0d15f0f23e45aef</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-28 19:46:31</sys_created_on>
+        <sys_db_object display_value="" name="oauth_entity">oauth_entity</sys_db_object>
+        <sys_id>dd1bd454342e45f09632c365662f40c4</sys_id>
+        <sys_metadata>651c91b23bfc7210f0d15f0f23e45a8c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Vehicles Scripted REST API</sys_name>
+        <sys_package display_value="Vehicles" source="x_1834695_vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_scope>
+        <sys_scope_delete display_value="">1701ae7e692a4a2484d3cbe44ec9d524</sys_scope_delete>
+        <sys_update_name>oauth_entity_651c91b23bfc7210f0d15f0f23e45a8c</sys_update_name>
+        <sys_update_version display_value="oauth_entity_651c91b23bfc7210f0d15f0f23e45a8c">b91c91b23bfc7210f0d15f0f23e45a90</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-28 19:46:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
