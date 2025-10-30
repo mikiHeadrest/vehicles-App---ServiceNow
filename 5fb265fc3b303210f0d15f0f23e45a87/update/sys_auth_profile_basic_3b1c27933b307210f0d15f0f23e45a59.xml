@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_auth_profile_basic">
+    <sys_auth_profile_basic action="INSERT_OR_UPDATE">
+        <name>vehicle.integration</name>
+        <password>﷞﷟﷒273c27933b307210f0d15f0f23e45a70﷬﷔1﷬﷭vmQAgtF-eI4hUeAJcOB6nQ==w638tbDw7mH6irSKgShwI9ScRPplYQtMFcSWn3Ic83d4pz5nEVeEqDMxWdowmZMssDc8lbtUgVk3n3FJVekovcbL1GJ3Vyv3nuB_Rai8rHE1KFhjaOYhEi5ch295NjJ1KWSIe0v23mCfoUfkovDXbzixe0A=﷮﷯</password>
+        <sys_class_name>sys_auth_profile_basic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:20:39</sys_created_on>
+        <sys_id>3b1c27933b307210f0d15f0f23e45a59</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>vehicle.integration</sys_name>
+        <sys_package display_value="Vehicles" source="x_1834695_vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_scope>
+        <sys_update_name>sys_auth_profile_basic_3b1c27933b307210f0d15f0f23e45a59</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:20:39</sys_updated_on>
+        <username>vehicle.integration</username>
+    </sys_auth_profile_basic>
+</record_update>

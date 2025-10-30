@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="oauth_entity_auth_scope_mapping">
+    <oauth_entity_auth_scope_mapping action="DELETE">
+        <auth_scope display_value="vehicles_read">4d1d7a573b3c3210f0d15f0f23e45a3e</auth_scope>
+        <oauth_entity display_value="Vehicle Table Service Now APP">c3e619c33bf0f210f0d15f0f23e45aed</oauth_entity>
+        <sys_class_name>oauth_entity_auth_scope_mapping</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 17:13:22</sys_created_on>
+        <sys_id>e41fcf533b3c3210f0d15f0f23e45a09</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Vehicles" source="x_1834695_vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_scope>
+        <sys_update_name>oauth_entity_auth_scope_mapping_e41fcf533b3c3210f0d15f0f23e45a09</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 17:13:22</sys_updated_on>
+    </oauth_entity_auth_scope_mapping>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Vehicles">5fb265fc3b303210f0d15f0f23e45a87</application>
+        <file_path/>
+        <instance_id>54f46e2033db66947c42c7bb9d5c7b24</instance_id>
+        <instance_name>dev355227</instance_name>
+        <name>oauth_entity_auth_scope_mapping_e41fcf533b3c3210f0d15f0f23e45a09</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="oauth_entity_auth_scope_mapping"><oauth_entity_auth_scope_mapping action="INSERT_OR_UPDATE"><auth_scope display_value="vehicles_read">4d1d7a573b3c3210f0d15f0f23e45a3e</auth_scope><oauth_entity display_value="Vehicle Table Service Now APP">c3e619c33bf0f210f0d15f0f23e45aed</oauth_entity><sys_class_name>oauth_entity_auth_scope_mapping</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-30 17:13:22</sys_created_on><sys_id>e41fcf533b3c3210f0d15f0f23e45a09</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Vehicles" source="x_1834695_vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_package><sys_policy/><sys_scope display_value="Vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_scope><sys_update_name>oauth_entity_auth_scope_mapping_e41fcf533b3c3210f0d15f0f23e45a09</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-30 17:13:22</sys_updated_on></oauth_entity_auth_scope_mapping></record_update>]]></payload>
+        <payload_hash>1555829565</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>fde122343bb43210f0d15f0f23e45a60</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 17:13:22</sys_created_on>
+        <sys_id>cf1fcb973b3c3210f0d15f0f23e45a37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19a361c183a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 17:13:22</sys_updated_on>
+        <type>Auth Scopes</type>
+        <update_guid>471fcb97823c32107cb63c29c5317037</update_guid>
+        <update_guid_history>471fcb97823c32107cb63c29c5317037:1555829565</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">65489b1b3bbc3210f0d15f0f23e45a5d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 17:53:24</sys_created_on>
+        <sys_db_object display_value="" name="oauth_entity_auth_scope_mapping">oauth_entity_auth_scope_mapping</sys_db_object>
+        <sys_id>0440c85d61fa4de08e21ba6e1c392240</sys_id>
+        <sys_metadata>e41fcf533b3c3210f0d15f0f23e45a09</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Vehicles" source="x_1834695_vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_scope>
+        <sys_scope_delete display_value="">1701ae7e692a4a2484d3cbe44ec9d524</sys_scope_delete>
+        <sys_update_name>oauth_entity_auth_scope_mapping_e41fcf533b3c3210f0d15f0f23e45a09</sys_update_name>
+        <sys_update_version display_value="oauth_entity_auth_scope_mapping_e41fcf533b3c3210f0d15f0f23e45a09">cf1fcb973b3c3210f0d15f0f23e45a37</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 17:53:24</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

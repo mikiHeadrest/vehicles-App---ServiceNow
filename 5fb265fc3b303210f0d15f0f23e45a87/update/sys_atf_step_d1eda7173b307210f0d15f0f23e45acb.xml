@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <callable_outputs/>
+        <copied_from/>
+        <description>Assert a response status code is ''</description>
+        <display_name>Assert Status Code</display_name>
+        <inputs/>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes>Verifies is the Status code of the Response is the one especified in the Status Code Parameter</notes>
+        <order>2</order>
+        <step_config display_value="Assert Status Code">2f4fa7309f132200ef4afa7dc67fcf0f</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>d1eda7173b307210f0d15f0f23e45acb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Assert Status Code</sys_name>
+        <sys_package display_value="Vehicles" source="x_1834695_vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_scope>
+        <sys_update_name>sys_atf_step_d1eda7173b307210f0d15f0f23e45acb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:33</sys_updated_on>
+        <table/>
+        <test display_value="Get Vehicle">5968275f3bfc3210f0d15f0f23e45a96</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=d1eda7173b307210f0d15f0f23e45acb"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>d1eda7173b307210f0d15f0f23e45acb</document_key>
+        <order>110</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>a00e2b173b307210f0d15f0f23e45a98</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:33</sys_updated_on>
+        <value/>
+        <variable display_value="Status code">9f5f67709f132200ef4afa7dc67fcf94</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>d1eda7173b307210f0d15f0f23e45acb</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>ec0e2b173b307210f0d15f0f23e45a97</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:22</sys_updated_on>
+        <value>equals</value>
+        <variable display_value="Operation">1d94cb1f3b8032000774229c93efc419</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=d1eda7173b307210f0d15f0f23e45acb"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status_code</field>
+        <id>d1eda7173b307210f0d15f0f23e45acb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>6c0e2b173b307210f0d15f0f23e45a97</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:33</sys_updated_on>
+        <table>var__m_atf_input_variable_2f4fa7309f132200ef4afa7dc67fcf0f</table>
+        <value>{{parameter['5968275f3bfc3210f0d15f0f23e45a96'].u_status_code}}</value>
+    </sys_element_mapping>
+</record_update>

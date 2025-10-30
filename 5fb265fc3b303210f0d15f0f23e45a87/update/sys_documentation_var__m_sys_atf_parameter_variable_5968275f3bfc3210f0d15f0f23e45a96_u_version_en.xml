@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_version" label="Version" language="en" table="var__m_sys_atf_parameter_variable_5968275f3bfc3210f0d15f0f23e45a96">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_version</element>
+            <help/>
+            <hint/>
+            <label>Version</label>
+            <language>en</language>
+            <name>var__m_sys_atf_parameter_variable_5968275f3bfc3210f0d15f0f23e45a96</name>
+            <plural>Version</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-30 19:14:34</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Version</sys_name>
+            <sys_package display_value="Vehicles" source="x_1834695_vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_scope>
+            <sys_update_name>sys_documentation_var__m_sys_atf_parameter_variable_5968275f3bfc3210f0d15f0f23e45a96_u_version_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-30 19:14:34</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

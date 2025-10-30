@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <callable_outputs/>
+        <copied_from/>
+        <description>Send a 'GET' request to '/api/x_1834695_vehicles/{{Parameters.Version}}/vehicles/vehicle/{{Parameters.VIN}}'</description>
+        <display_name>Send REST Request - Inbound</display_name>
+        <inputs/>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes>In this step we call the API method GET</notes>
+        <order>1</order>
+        <step_config display_value="Send REST Request - Inbound">e00571a10b3222000b7da95e93673a8f</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:27:34</sys_created_on>
+        <sys_id>7bcb6f533b307210f0d15f0f23e45aa3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Send REST Request - Inbound</sys_name>
+        <sys_package display_value="Vehicles" source="x_1834695_vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vehicles">5fb265fc3b303210f0d15f0f23e45a87</sys_scope>
+        <sys_update_name>sys_atf_step_7bcb6f533b307210f0d15f0f23e45aa3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:41:55</sys_updated_on>
+        <table/>
+        <test display_value="Get Vehicle">5968275f3bfc3210f0d15f0f23e45a96</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=7bcb6f533b307210f0d15f0f23e45aa3"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>7bcb6f533b307210f0d15f0f23e45aa3</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:27:36</sys_created_on>
+        <sys_id>11dda7173b307210f0d15f0f23e45aab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:27:36</sys_updated_on>
+        <value>basic</value>
+        <variable display_value="Authentication Type">6cdd0ab543010210b6f9a0246bb8f2f2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>7bcb6f533b307210f0d15f0f23e45aa3</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:27:36</sys_created_on>
+        <sys_id>1ddda7173b307210f0d15f0f23e45aab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:27:36</sys_updated_on>
+        <value/>
+        <variable display_value="Query Parameters">58408e250b3222000b7da95e93673a5c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>7bcb6f533b307210f0d15f0f23e45aa3</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:27:36</sys_created_on>
+        <sys_id>59dda7173b307210f0d15f0f23e45aab</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:41:55</sys_updated_on>
+        <value>/api/x_1834695_vehicles/{{Parameters.Version}}/vehicles/vehicle/{{Parameters.VIN}}</value>
+        <variable display_value="Path">50bff9250b3222000b7da95e93673a9b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>7bcb6f533b307210f0d15f0f23e45aa3</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:27:36</sys_created_on>
+        <sys_id>5ddda7173b307210f0d15f0f23e45aaa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:27:36</sys_updated_on>
+        <value>{"Content-Type":"application/json","Accept":"application/json"}</value>
+        <variable display_value="Headers">cec002650b3222000b7da95e93673aae</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>7bcb6f533b307210f0d15f0f23e45aa3</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:27:36</sys_created_on>
+        <sys_id>95dda7173b307210f0d15f0f23e45aab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:27:36</sys_updated_on>
+        <value/>
+        <variable display_value="Body">81e042650b3222000b7da95e93673aa2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>7bcb6f533b307210f0d15f0f23e45aa3</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:27:36</sys_created_on>
+        <sys_id>99dda7173b307210f0d15f0f23e45aaa</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:41:55</sys_updated_on>
+        <value>d601b39b3b307210f0d15f0f23e45a3d</value>
+        <variable display_value="Basic authentication">020a6af09fd32200ef4afa7dc67fcfec</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>7bcb6f533b307210f0d15f0f23e45aa3</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:27:36</sys_created_on>
+        <sys_id>d1dda7173b307210f0d15f0f23e45aab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:27:36</sys_updated_on>
+        <value>get</value>
+        <variable display_value="Method">59877da10b3222000b7da95e93673a56</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>7bcb6f533b307210f0d15f0f23e45aa3</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:27:36</sys_created_on>
+        <sys_id>dddda7173b307210f0d15f0f23e45aab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:27:36</sys_updated_on>
+        <value/>
+        <variable display_value="Mutual Authentication">89ad06b543010210b6f9a0246bb8f2d7</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=7bcb6f533b307210f0d15f0f23e45aa3"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>auth_type</field>
+        <id>7bcb6f533b307210f0d15f0f23e45aa3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:27:36</sys_created_on>
+        <sys_id>1ddda7173b307210f0d15f0f23e45aa9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:27:36</sys_updated_on>
+        <table>var__m_atf_input_variable_e00571a10b3222000b7da95e93673a8f</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>basic_auth</field>
+        <id>7bcb6f533b307210f0d15f0f23e45aa3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:27:35</sys_created_on>
+        <sys_id>01dda7173b307210f0d15f0f23e45aa9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:27:35</sys_updated_on>
+        <table>var__m_atf_input_variable_e00571a10b3222000b7da95e93673a8f</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>end_point</field>
+        <id>7bcb6f533b307210f0d15f0f23e45aa3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:27:36</sys_created_on>
+        <sys_id>91dda7173b307210f0d15f0f23e45aaa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:27:36</sys_updated_on>
+        <table>var__m_atf_input_variable_e00571a10b3222000b7da95e93673a8f</table>
+        <value>/api/x_1834695_vehicles/{{parameter['5968275f3bfc3210f0d15f0f23e45a96'].u_version}}/vehicles/vehicle/{{parameter['5968275f3bfc3210f0d15f0f23e45a96'].u_vin}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>headers</field>
+        <id>7bcb6f533b307210f0d15f0f23e45aa3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:27:36</sys_created_on>
+        <sys_id>59dda7173b307210f0d15f0f23e45aa9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:27:36</sys_updated_on>
+        <table>var__m_atf_input_variable_e00571a10b3222000b7da95e93673a8f</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>mutual_auth</field>
+        <id>7bcb6f533b307210f0d15f0f23e45aa3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:27:36</sys_created_on>
+        <sys_id>19dda7173b307210f0d15f0f23e45aaa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:27:36</sys_updated_on>
+        <table>var__m_atf_input_variable_e00571a10b3222000b7da95e93673a8f</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>query_params</field>
+        <id>7bcb6f533b307210f0d15f0f23e45aa3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:27:36</sys_created_on>
+        <sys_id>55dda7173b307210f0d15f0f23e45aaa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:27:36</sys_updated_on>
+        <table>var__m_atf_input_variable_e00571a10b3222000b7da95e93673a8f</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>request_body</field>
+        <id>7bcb6f533b307210f0d15f0f23e45aa3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:27:36</sys_created_on>
+        <sys_id>dddda7173b307210f0d15f0f23e45aa9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:27:36</sys_updated_on>
+        <table>var__m_atf_input_variable_e00571a10b3222000b7da95e93673a8f</table>
+        <value/>
+    </sys_element_mapping>
+</record_update>
